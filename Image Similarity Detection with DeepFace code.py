@@ -3,19 +3,16 @@
 
 # In[3]:
 
-
 get_ipython().system(' pip install deepface==0.0.81')
 get_ipython().system(' pip install tensorflow==2.15.1')
 
 
 # In[4]:
 
-
 from deepface import DeepFace  #import deepface library
 
 
-# In[8]:
-
+# In[8]: define function for future recall
 
 def verify_images(image1_path, image2_path):
   result = DeepFace.verify(img1_path=image1_path, img2_path=image2_path)  # to calculate similarity between 2 images
@@ -24,26 +21,19 @@ def verify_images(image1_path, image2_path):
   return similarity_score
 
 
-# In[11]:
 
-
+# In[11]: test verify_images function
 x = verify_images("C:/Users/marwa/Downloads/A1.jpg","C:/Users/marwa/Downloads/A2.jpg")
 print(x)
 
 
-# In[ ]:
 
 
 
 
 
-# In[ ]:
 
 
-
-
-
-# In[ ]:
 
 
 
